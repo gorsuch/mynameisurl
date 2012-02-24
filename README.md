@@ -4,11 +4,11 @@ URL checking as a service.  A hack in progress.
 
 I know it isn't efficient yet.  That's not the point right now.  
 
-I'm tired of having to define messy monitoring checks for each url type I want to monitor.  Instead, I want a single, normalized way of doing so.
+I want a very simple way of asking if a url is up or not.  This is decoupled from service definitions.  Just tell me if it works.
 
 The client passes a JSON message to a specifc redis list.  The message include the url to be checked along with another redis list to reply to with the result.
 
-The worker... does the work.
+The worker... does the work.  You can have LOTS of them.
 
 This should utlimately be expanded to include different URL / Service types (tcp, redis, icmp?, etc).
 
